@@ -68,11 +68,11 @@ input[type=number] {
 html { font-size: 62.5%; font-weight: 400;}
 body { 
   background: var(--body-color);
-  padding: 0; 
+  padding: 0 0 0 140px; 
   margin: 0; 
   font-family: var(--font-family-open-sans);
   font-size: var(--font-size-regular);
-  font-weight: 400; 
+  font-weight: 400;
 }
 html,
 body{ height: 100%;  width: 100%;}
