@@ -5,9 +5,14 @@ import './Dashboard.scss';
 
 const Dashboard = () => {
   return (
-    <>
+    <>      
       <Aside />
-      <Header />
+      <div className='main-wrapper'>
+        <Header />
+        <main>
+        
+        </main>
+      </div>
     </>
   );
 }

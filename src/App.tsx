@@ -7,11 +7,9 @@ import Dashboard from './pages/Dashboard/Dashboard';
 const App = () => {
   return (
     <Router>
-      <main>
         <Routes>
           <Route path="/" element={<Dashboard />} />
         </Routes>
-      </main>
     </Router>
   );
 }
