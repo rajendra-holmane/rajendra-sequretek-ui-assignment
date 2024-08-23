@@ -1,12 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.scss';
 
-function App() {
+import Dashboard from './pages/Dashboard/Dashboard';
+
+const App = () => {
   return (
-    <>
-      
-    </>
+    <Router>
+      <main>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+        </Routes>
+      </main>
+    </Router>
   );
 }
 

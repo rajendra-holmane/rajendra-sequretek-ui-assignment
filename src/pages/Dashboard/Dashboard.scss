@@ -1,0 +1,33 @@
+ header{
+    padding: 0 40px;
+    box-shadow: var(--shadow-header);
+    position: fixed;
+    left: 140px;
+    width: calc(100% - 140px);
+    top: 0;
+    height: 80px;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  
+    .rhs{
+      display: flex;
+    }
+    .welcome{
+      display: flex;
+      padding-left: 24px;
+    }
+    .welcome-msg{
+      p{
+        font-size: var(--font-size-small);
+      }
+      .user-name{
+        font-size: var(--font-size-regular);
+      }
+    }
+    .avtar{
+      width: 40px;
+      margin-right: 5px;
+    }
+}

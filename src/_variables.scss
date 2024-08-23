@@ -1,0 +1,62 @@
+:root {
+  // Typography
+  --font-family-open-sans: "Open Sans", sans-serif;
+  --font-size-display: 6.4rem;
+  --font-size-heading-01: 4.8rem;
+  --font-size-heading-02: 4rem;
+  --font-size-heading-03: 3.2rem;
+  --font-size-heading-04: 2.4rem;
+  --font-size-heading-05: 1.6rem;
+
+  --font-size-extra-large: 2.4rem;
+  --font-size-large: 2rem;
+  --font-size-regular: 1.6rem;
+  --font-size-small: 1.4rem;
+
+  @media (max-width: 768px) {
+    :root {
+      --font-size-regular: 1.4rem; 
+    }
+  }
+
+  // Color Styles
+  --body-color:#f2f2f2;
+  --white-color: #fff;
+  --black-color: #000;
+  --aside-color: #030E4F;
+  --primary-color: #265D86;
+  --aside-active-color: #F49F1C;
+  --on-primary-color: rgba(3, 151, 195, 0.3);
+  --secondary-color: #1F2535;
+  --tertiary-color: #333B51;
+
+  // State Color
+  --success-color: #14B457;
+  --error-color: #ED3A3A;
+  --warning-color: #FF9500;
+  --info-color: #06A8BE;
+  --icon-color: #0397C3;
+  --text-color: #2F3850;
+  --background-color: #F7F8FA;        
+  --gray-color: #F2F2F2;
+
+  // Shadows
+  --shadow-header: 0px 20px 25px 0px rgba(76, 103, 100, 0.1);
+
+  // Button Style
+  --primary-button-default: #0397C3;
+  --primary-button-hover: #0986AB;
+  --primary-button-disabled: #CCCCCC;
+
+  --secondary-button-outline: #2B6273;
+  --secondary-button-hover: #0397C3;
+  --secondary-button-disabled: #CDCDCD;
+  --secondary-button-disabled-border: #DDDDDD;
+}
+
+[data-theme="dark"] {
+  --primary-color: #1abc9c;
+  --secondary-color: #e74c3c;
+  --background-color: #333;
+  --text-color: #f8f9fa;
+}
