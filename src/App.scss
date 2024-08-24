@@ -11,10 +11,7 @@ h2{
 }
 
 .section-spacing{
-  padding-top: 60px;
-  h2{
-    padding-bottom: 40px;
-  }
+  padding-top: 60px;  
 }
 
 
@@ -87,6 +84,9 @@ h2{
 
 .custom-row {
   row-gap: 48px;
+  h2{
+    padding-bottom: 40px;
+  }
 }
 
 .custom-col {

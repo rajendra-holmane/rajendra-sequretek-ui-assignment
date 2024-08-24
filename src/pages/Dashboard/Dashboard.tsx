@@ -2,8 +2,13 @@ import React, { useState } from 'react';
 import Aside from '../../components/Aside/Aside';
 import Header from '../../components/Header/Header';
 import DataTableComponent from '../../components/DataTable/DataTable';
+import { Row, Col } from 'react-bootstrap';
+import Card from '../../components/Card/Card';
 import InfoCard from '../../components/InfoCard/InfoCard';
+import ColorBarChart from '../../components/ColorBarChart/ColorBarChart';
+import ColorLineChart from '../../components/ColorLineChart/ColorLineChart';
 import './Dashboard.scss';
+
 
 const Dashboard: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -25,6 +30,7 @@ const Dashboard: React.FC = () => {
       <div className='main-wrapper'>
         <Header />
         <main>
+          
           <div className='info-section'>
             <InfoCard
               page={currentPage}
@@ -33,7 +39,22 @@ const Dashboard: React.FC = () => {
               totalPages={totalPages}
             />
           </div>
-          <div className='section-spacing table-section'>
+          <Row className='custom-row'>
+          <Col lg={6} className="custom-col">
+            <Card>
+            <ColorBarChart/> 
+            </Card>
+          </Col>
+          <Col lg={6} className="custom-col">
+            <Card>
+            <div id="chart">
+            <ColorLineChart /> 
+            </div>
+            </Card>
+          </Col>        
+        </Row>
+          <Row className='custom-row table-section'>
+          <Col lg={12} className="custom-col">
             <h2>Users List</h2>
             <DataTableComponent
               perPage={perPage} 
@@ -44,7 +65,12 @@ const Dashboard: React.FC = () => {
               setTotalPages={setTotalPages}
               totalUsers={totalUsers}
             />
-          </div>          
+            </Col>
+          </Row>
+
+          
+          
+              
         </main>
       </div>
     </>

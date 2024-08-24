@@ -6,12 +6,13 @@
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: var(--font-size-regular);
-    font-weight: 500;
+    font-weight: 400;
   }
   .number{
-    font-weight: 600;
+    font-weight: 700;
     font-size: var(--font-size-heading-01);
     padding-top: 10px;
+    color: #FF8343;
   }
 }
 /*info-cards:end*/ 
