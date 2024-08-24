@@ -4,7 +4,7 @@ import './App.scss';
 
 import Dashboard from './pages/Dashboard/Dashboard';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <Router>
         <Routes>

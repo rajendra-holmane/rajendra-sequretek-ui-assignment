@@ -10,6 +10,16 @@ interface User {
   avatar: string;
 }
 
+interface DataTableComponentProps {
+  currentPage: number;
+  perPage: number;
+  onPageChange: (page: number) => void;
+  onPerPageChange: (perPage: number) => void;
+  setTotalUsers: (total: number) => void;
+  setTotalPages: (totalPages: number) => void;
+  totalUsers: number
+}
+
 const columns = [
   {
     name: 'ID',
@@ -42,10 +52,18 @@ const columns = [
   },
 ];
 
-const DataTableComponent: React.FC = () => {
+const DataTableComponent: React.FC<DataTableComponentProps> = ({
+  currentPage, 
+  perPage, 
+  onPageChange, 
+  onPerPageChange, 
+  setTotalUsers, 
+  setTotalPages,
+  totalUsers
+}) => {
+  
   const [data, setData] = useState<User[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [currentPage, setCurrentPage] = useState<number>(1);
 
   useEffect(() => {
     const getData = async () => {
@@ -54,6 +72,9 @@ const DataTableComponent: React.FC = () => {
         const response = await fetchUsers(currentPage);
         // console.log(response);
         setData(response.data.data);
+        onPerPageChange(response.data.per_page);
+        setTotalUsers(response.data.total);
+        setTotalPages(response.data.total_pages);
       } catch (error) {
         console.error('Error fetching users', error);
       } finally {
@@ -61,11 +82,7 @@ const DataTableComponent: React.FC = () => {
       }
     };
     getData();
-  }, [currentPage]);
-
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-  };
+  }, [currentPage, onPerPageChange, setTotalUsers, setTotalPages]);
 
   return (
     <div>
@@ -75,9 +92,9 @@ const DataTableComponent: React.FC = () => {
         progressPending={loading}
         pagination
         paginationServer
-        paginationTotalRows={12}
-        onChangePage={handlePageChange}
-        paginationPerPage={6}
+        paginationTotalRows={totalUsers}
+        onChangePage={onPageChange}
+        paginationPerPage={perPage}
       />
     </div>
   );

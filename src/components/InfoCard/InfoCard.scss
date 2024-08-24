@@ -1,0 +1,17 @@
+/*info-cards:start*/ 
+.info-cards{
+  text-align: center;
+  h3{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--font-size-regular);
+    font-weight: 500;
+  }
+  .number{
+    font-weight: 600;
+    font-size: var(--font-size-heading-01);
+    padding-top: 10px;
+  }
+}
+/*info-cards:end*/ 

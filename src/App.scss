@@ -5,6 +5,19 @@ main{
   padding: 40px;
 }
 
+h2{
+  font-size: var(--font-size-heading-02);
+  font-weight: 600;
+}
+
+.section-spacing{
+  padding-top: 60px;
+  h2{
+    padding-bottom: 40px;
+  }
+}
+
+
 /*React Datatable Style:start*/ 
 .rdt_Table{
   .rdt_TableHead{
@@ -71,3 +84,11 @@ main{
   }
 }
 /*React Datatable Style:end*/
+
+.custom-row {
+  row-gap: 48px;
+}
+
+.custom-col {
+  padding: 24px;
+}
