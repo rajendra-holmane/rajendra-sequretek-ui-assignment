@@ -5,7 +5,7 @@ const Header: React.FC = () => {
     <>
       <header>        
         <div className="welcome">
-            <img className="avtar" src="/Assets/images/avatar.svg" alt="" />
+            <img className="avtar" src="/Assets/images/linkdin-profile-pic.png" alt="" />
             <div className="welcome-msg">
                 <p>Welcome Back!</p>
                 <p className="user-name">Rajendra Holmane</p>

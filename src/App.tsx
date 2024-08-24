@@ -12,10 +12,15 @@ const App: React.FC = () => {
       <BrowserRouter>
         <Aside />
         <Header />
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/add-user" element={<AddUser />} />
-        </Routes>
+        <div className='main-wrapper'>
+          <main>
+            <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/add-user" element={<AddUser />} />
+          </Routes>
+          </main>
+        </div>        
       </BrowserRouter>
     </>    
   );

@@ -24,11 +24,12 @@
         font-size: var(--font-size-small);
       }
       .user-name{
-        font-size: var(--font-size-regular);
+        font-size: var(--font-size-small);
       }
     }
     .avtar{
       width: 40px;
-      margin-right: 5px;
+      height: 40px;
+      margin-right: 10px;
     }
 }

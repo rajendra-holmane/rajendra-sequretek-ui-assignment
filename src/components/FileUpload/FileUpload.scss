@@ -1,0 +1,18 @@
+.file-upload{
+    width: 160px;
+    height: 160px;
+    background: #EDF2F6;
+    border: dashed 1px #8D98AA;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    h3{
+        padding-top: 8px;
+        font-size: var(--font-size-heading-05);
+    }
+}
