@@ -79,9 +79,14 @@ h2{
       min-width: 180px;
     }
   }
-  .update-icon{
+  .table-icon{
     max-width: 24px;
     cursor: pointer;
+  }
+  .table-icon{
+    max-width: 20px;
+    cursor: pointer;
+    margin: 0 10px;
   }
 }
 /*React Datatable Style:end*/

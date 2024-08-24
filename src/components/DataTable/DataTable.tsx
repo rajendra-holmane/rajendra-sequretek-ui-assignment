@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import DataTable from 'react-data-table-component';
 import { useNavigate } from 'react-router-dom';
-import { fetchUsers } from '../../services/api';
+import { fetchUsers, deleteUser } from '../../services/api';
 
 interface User {
   id: number;
@@ -65,6 +65,22 @@ const DataTableComponent: React.FC<DataTableComponentProps> = ({
     navigate(`/update-user/${userId}`);
   };
 
+  const handleDeleteClick = async (userId: number) => {
+    try {
+      const response = await deleteUser(userId);
+  
+      if (response.status === 204) {
+        console.log('User successfully deleted');
+        setData(data.filter(user => user.id !== userId));
+      } else {
+        throw new Error('Failed to delete user');
+      }
+    } catch (error) {
+      console.error('Error deleting user:', error);
+    }
+  };
+  
+
   const columns = [
     {
       name: 'ID',
@@ -98,7 +114,10 @@ const DataTableComponent: React.FC<DataTableComponentProps> = ({
     {
       name: '',
       cell: (row: User) => (
-        <img className='update-icon' src='/Assets/images/update-icon.png' onClick={() => handleUpdateClick(row.id)} alt='Update' />
+        <>
+          <img className='table-icon' src='/Assets/images/update-icon.png' onClick={() => handleUpdateClick(row.id)} alt='Update' />
+          <img className='table-icon' src='/Assets/images/delete-icon.png' onClick={() => handleDeleteClick(row.id)} alt='Delete' />
+        </>
       ),
       ignoreRowClick: true,
       allowOverflow: true,

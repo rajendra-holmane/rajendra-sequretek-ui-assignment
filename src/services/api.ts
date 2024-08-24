@@ -8,6 +8,9 @@ export const fetchUsers = (page: number) =>
 export const fetchUserById = (id: number) =>
     axios.get(`${API_URL}/users/${id}`);
 
+export const deleteUser = (id: number) =>
+    axios.delete(`${API_URL}/users/${id}`);
+
 export const fetchList = () =>
     axios.get(`${API_URL}/unknown`);
 
