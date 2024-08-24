@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import DataTable from 'react-data-table-component';
+import { useNavigate } from 'react-router-dom';
 import { fetchUsers } from '../../services/api';
 
 interface User {
@@ -20,37 +21,11 @@ interface DataTableComponentProps {
   totalUsers: number
 }
 
-const columns = [
-  {
-    name: 'ID',
-    selector: (row: User) => row.id,
-    sortable: true,
-  },
-  {
-    name: 'Avatar',
-    cell: (row: User) => (
-      <div className='avtar-wrapper'>
-        <img src={row.avatar} alt="Avatar" />
-      </div>
-    ),
-    sortable: false,
-  },  
-  {
-    name: 'First Name',
-    selector: (row: User) => row.first_name,
-    sortable: true,
-  },
-  {
-    name: 'Last Name',
-    selector: (row: User) => row.last_name,
-    sortable: true,
-  },
-  {
-    name: 'Email',
-    selector: (row: User) => row.email,
-    sortable: true,
-  },
-];
+
+
+
+
+
 
 const DataTableComponent: React.FC<DataTableComponentProps> = ({
   currentPage, 
@@ -64,6 +39,8 @@ const DataTableComponent: React.FC<DataTableComponentProps> = ({
   
   const [data, setData] = useState<User[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getData = async () => {
@@ -83,6 +60,51 @@ const DataTableComponent: React.FC<DataTableComponentProps> = ({
     };
     getData();
   }, [currentPage, onPerPageChange, setTotalUsers, setTotalPages]);
+
+  const handleUpdateClick = (userId: number) => {
+    navigate(`/update-user/${userId}`);
+  };
+
+  const columns = [
+    {
+      name: 'ID',
+      selector: (row: User) => row.id,
+      sortable: true,
+    },
+    {
+      name: 'Avatar',
+      cell: (row: User) => (
+        <div className='avtar-wrapper'>
+          <img src={row.avatar} alt="Avatar" />
+        </div>
+      ),
+      sortable: false,
+    },  
+    {
+      name: 'First Name',
+      selector: (row: User) => row.first_name,
+      sortable: true,
+    },
+    {
+      name: 'Last Name',
+      selector: (row: User) => row.last_name,
+      sortable: true,
+    },
+    {
+      name: 'Email',
+      selector: (row: User) => row.email,
+      sortable: true,
+    },
+    {
+      name: '',
+      cell: (row: User) => (
+        <img className='update-icon' src='/Assets/images/update-icon.png' onClick={() => handleUpdateClick(row.id)} alt='Update' />
+      ),
+      ignoreRowClick: true,
+      allowOverflow: true,
+      button: true,
+    },
+  ];
 
   return (
     <div>

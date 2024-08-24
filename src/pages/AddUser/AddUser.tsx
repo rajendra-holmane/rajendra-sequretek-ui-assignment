@@ -38,7 +38,7 @@ const AddUser: React.FC = () => {
         setSuccessMessage('User successfully added!');
         setTimeout(() => {
           navigate('/dashboard');
-        }, 2000);
+        }, 10000);
       } else {
         throw new Error('Failed to add user');
       }
@@ -71,10 +71,9 @@ const AddUser: React.FC = () => {
         </div>
         <Row className="form-container">
       <Col md={6} sm={12}>
+        <Form onSubmit={handleSubmit} className="form">
         {successMessage && <Alert variant="success">{successMessage}</Alert>}
         {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
-        
-        <Form onSubmit={handleSubmit} className="form">
           <Row>
             <Col md={4} sm={12}>
               <Form.Group className="form-group" controlId="avatar">

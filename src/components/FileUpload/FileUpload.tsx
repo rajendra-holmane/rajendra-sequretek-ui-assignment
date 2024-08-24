@@ -1,9 +1,14 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
 import './FileUpload.scss';
 
-const FileUpload: React.FC = () => {
+interface FileUploadProps {
+  avatar?: string;
+  onAvatarChange?: (avatar: string) => void;
+}
+
+const FileUpload: React.FC<FileUploadProps> = ({ avatar, onAvatarChange }) => {
   const [file, setFile] = useState<File | null>(null);
-  const [preview, setPreview] = useState<string | null>(null);
+  const [preview, setPreview] = useState<string | null>(avatar || null);
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0];
@@ -15,6 +20,9 @@ const FileUpload: React.FC = () => {
       reader.onloadend = () => {
         if (reader.result) {
           setPreview(reader.result as string);
+          if (onAvatarChange) {
+            onAvatarChange(reader.result as string);
+          }
         }
       };
       reader.readAsDataURL(selectedFile);
@@ -24,6 +32,10 @@ const FileUpload: React.FC = () => {
       setPreview(null);
     }
   };
+
+  useEffect(() => {
+    setPreview(avatar || null);
+  }, [avatar]);
 
   return (
     <div className="file-upload">
