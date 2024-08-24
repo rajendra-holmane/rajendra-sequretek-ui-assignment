@@ -6,7 +6,7 @@ main{
 }
 
 h2{
-  font-size: var(--font-size-heading-02);
+  font-size: var(--font-size-heading-03);
   font-weight: 600;
 }
 
@@ -84,11 +84,25 @@ h2{
 
 .custom-row {
   row-gap: 48px;
-  h2{
-    padding-bottom: 40px;
-  }
 }
 
 .custom-col {
   padding: 24px;
+}
+
+.title-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 24px;
+}
+
+.btn-primary{
+  background: var(--primary-button-default);
+  border: solid 1px var(--primary-button-default);
+  font-size: var(--font-size-regular);
+  padding: 8px 16px;
+  &:hover{
+    background: var(--primary-button-hover);
+  }
 }

@@ -1,16 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.scss';
-
+import { BrowserRouter, Routes, Route  } from 'react-router-dom';
+import Aside from './components/Aside/Aside';
+import Header from './components/Header/Header';
 import Dashboard from './pages/Dashboard/Dashboard';
+import AddUser from './pages/AddUser/AddUser';
+import './App.scss';
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <>
+      <BrowserRouter>
+        <Aside />
+        <Header />
         <Routes>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/add-user" element={<AddUser />} />
         </Routes>
-    </Router>
+      </BrowserRouter>
+    </>    
   );
 }
 

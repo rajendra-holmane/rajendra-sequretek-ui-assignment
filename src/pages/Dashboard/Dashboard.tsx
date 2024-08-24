@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import Aside from '../../components/Aside/Aside';
-import Header from '../../components/Header/Header';
+import { useNavigate  } from 'react-router-dom';
 import DataTableComponent from '../../components/DataTable/DataTable';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import Card from '../../components/Card/Card';
 import InfoCard from '../../components/InfoCard/InfoCard';
 import ColorBarChart from '../../components/ColorBarChart/ColorBarChart';
@@ -16,6 +15,8 @@ const Dashboard: React.FC = () => {
   const [totalUsers, setTotalUsers] = useState<number>(0);
   const [totalPages, setTotalPages] = useState<number>(0);
 
+  const navigate = useNavigate();
+
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
   };
@@ -24,11 +25,14 @@ const Dashboard: React.FC = () => {
     setPerPage(perPage);
   };
 
+  const handleAddUser = () => {
+    navigate('/add-user');
+  };
+
   return (
     <>      
-      <Aside />
       <div className='main-wrapper'>
-        <Header />
+       
         <main>
           
           <div className='info-section'>
@@ -41,11 +45,19 @@ const Dashboard: React.FC = () => {
           </div>
           <Row className='custom-row'>
           <Col lg={6} className="custom-col">
+            <div className='title-section'>
+            <h2>Color Bar Chart</h2>
+                <Button>Add Color</Button>
+              </div>
             <Card>
             <ColorBarChart/> 
             </Card>
           </Col>
-          <Col lg={6} className="custom-col">
+          <Col lg={6} className="custom-col">          
+          <div className='title-section'>
+              <h2>Color Line Chart</h2>
+              <Button>Add Color</Button>
+            </div>
             <Card>
             <div id="chart">
             <ColorLineChart /> 
@@ -55,7 +67,12 @@ const Dashboard: React.FC = () => {
         </Row>
           <Row className='custom-row table-section'>
           <Col lg={12} className="custom-col">
-            <h2>Users List</h2>
+            <div className='title-section'>
+              <h2>Users List</h2>
+              <Button onClick={handleAddUser}>
+                Add User
+              </Button>
+            </div>            
             <DataTableComponent
               perPage={perPage} 
               currentPage={currentPage}
@@ -67,10 +84,6 @@ const Dashboard: React.FC = () => {
             />
             </Col>
           </Row>
-
-          
-          
-              
         </main>
       </div>
     </>
