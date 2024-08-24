@@ -51,6 +51,7 @@ const AddUser: React.FC = () => {
   };
 
   const handleReset = () => {
+    setAvatar('');
     setFirstName('');
     setLastName('');
     setEmail('');
@@ -78,7 +79,10 @@ const AddUser: React.FC = () => {
             <Col md={4} sm={12}>
               <Form.Group className="form-group" controlId="avatar">
                 <Form.Label>Your Profile Picture</Form.Label>
-                <FileUpload />
+                <FileUpload
+                      avatar={avatar}
+                      onAvatarChange={(newAvatar) => setAvatar(newAvatar)}
+                    />
               </Form.Group>
             </Col>
 
