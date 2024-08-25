@@ -21,6 +21,10 @@ h2{
 
 
 /*React Datatable Style:start*/ 
+.data-table-container{
+  width: 100%;
+  overflow: scroll;
+}
 .rdt_Table{
   .rdt_TableHead{
     
@@ -47,14 +51,7 @@ h2{
         background-color: var(--table-shade-2);
         border: none;
       }
-    }
-    .rdt_TableCell{            
-      div{
-        &:first-child{
-          white-space: normal;
-        }
-      }
-    }  
+    } 
     .rdt_TableRow{
       .rdt_TableCell{
         font-size: var(--font-size-small);
@@ -97,7 +94,7 @@ h2{
 /*React Datatable Style:end*/
 
 .custom-row {
-  row-gap: 48px;
+  margin-top: 24px;
 }
 
 .custom-col {
@@ -158,4 +155,120 @@ h2{
     box-shadow: none;
     border-color: #E0E4EC;
   }
+}
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
+  body{
+    padding-left: 100px;
+  }
+  .main-wrapper{
+    padding-top: 70px;
+  }
+  main{
+    padding: 30px;
+  }
+  .custom-row{
+    margin-top: 40px;
+  }
+  .custom-col{
+    padding: 12px;
+  }  
+  
+  /*React Datatable Style:start*/ 
+.data-table-container{
+  width: 100%;
+  overflow: scroll;
+}
+.rdt_Table{
+  .rdt_TableCell,
+  .rdt_TableCol{
+    &:first-child{
+      max-width: 70px;
+      min-width: 70px;
+    }
+  }
+  .rdt_TableCell,
+  .rdt_TableCol{
+    &:nth-child(2){
+      max-width: 150px;
+      min-width: 150px;
+    }
+    &:nth-child(3){
+      max-width: 150px;
+      min-width: 150px;
+    }
+    &:nth-child(4){
+      max-width: 150px;
+      min-width: 150px;
+    }
+  }
+  .rdt_TableHead{
+    .rdt_TableHeadRow{
+      .rdt_TableCol{
+        padding: 8px;
+      }
+    }
+  }
+  .rdt_TableBody{
+    .rdt_TableRow{
+      .rdt_TableCell{
+        padding: 8px;
+      }
+    }
+  }
+  .table-icon{
+    max-width: 20px;
+  }
+}
+/*React Datatable Style:end*/
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  body{
+    padding-left: 0;
+  }
+  main{
+    padding: 16px 16px 80px;
+  }
+  .custom-row{
+    margin-top: 16px;
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  .custom-col{
+    padding: 12px;
+  }
+  /*React Datatable Style:start*/ 
+.rdt_Table{
+  .rdt_TableCell,
+  .rdt_TableCol{
+    &:first-child{
+      max-width: 60px;
+      min-width: 60px;
+    }
+  }
+  .rdt_TableCell,
+  .rdt_TableCol{
+    &:nth-child(2){
+      max-width: 100px;
+      min-width: 100px;
+    }
+    &:nth-child(3){
+      max-width: 150px;
+      min-width: 150px;
+    }
+    &:nth-child(4){
+      max-width: 150px;
+      min-width: 150px;
+    }
+  }
+  .table-icon{
+    max-width: 20px;
+  }  
+}
+.rdt_Pagination{
+  .cEDwUG,
+  .cYFpUK{
+    display: none;
+  }
+}
+/*React Datatable Style:end*/
 }

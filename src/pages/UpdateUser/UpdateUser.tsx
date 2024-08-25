@@ -100,7 +100,7 @@ const UpdateUser: React.FC = () => {
           <img className='back-button' src='/Assets/images/back-arrow-icon.svg' alt="Back" onClick={handleBack} />
           <h2>Update User</h2>
         </div>
-        <Row className="form-container">
+        <Row className="g-0 form-container">
           <Col md={6} sm={12}>
             <Form onSubmit={handleSubmit} className="form">
               {successMessage && <Alert variant="success">{successMessage}</Alert>}

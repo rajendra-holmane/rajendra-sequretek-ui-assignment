@@ -14,8 +14,8 @@ interface InfoCardProps {
 const InfoCard: React.FC<InfoCardProps> = ({ page, perPage, totalUsers, totalPages }) => {
   return (
     <>
-      <Row className='custom-row'>
-        <Col lg={3} className="custom-col">
+      <Row className='g-0 mt-0 custom-row'>
+        <Col lg={3} md={6} xs={6} className="custom-col">
           <Card>
             <div className='info-cards'>
               <h3>Total Users</h3>
@@ -23,7 +23,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ page, perPage, totalUsers, totalPag
             </div>
           </Card>
         </Col>
-        <Col lg={3} className="custom-col">
+        <Col lg={3} md={6} xs={6}  className="custom-col">
           <Card>
             <div className='info-cards'>
               <h3>Total Pages</h3>
@@ -31,7 +31,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ page, perPage, totalUsers, totalPag
             </div>
           </Card>
         </Col>
-        <Col lg={3} className="custom-col">
+        <Col lg={3} md={6} xs={6} className="custom-col">
           <Card>
             <div className='info-cards'>
               <h3>Current Page</h3>
@@ -39,7 +39,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ page, perPage, totalUsers, totalPag
             </div>
           </Card>
         </Col>
-        <Col lg={3} className="custom-col">
+        <Col lg={3}  md={6} xs={6} className="custom-col">
           <Card>
             <div className='info-cards'>
               <h3>Per Page</h3>

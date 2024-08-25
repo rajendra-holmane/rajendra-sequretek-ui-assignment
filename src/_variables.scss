@@ -14,10 +14,38 @@
   --font-size-small: 1.4rem;
   --font-size-xs: 1.4rem;
 
+  @media only screen and (min-width: 0px) and (max-width: 1024px) {
+    --font-size-heading-01: 3.6rem;
+    --font-size-heading-02: 3rem;
+    --font-size-heading-03: 2.4rem;
+    --font-size-heading-04: 1.8rem;
+    --font-size-heading-05: 1.4rem;
+
+    --font-size-extra-large: 2rem;
+    --font-size-large: 1.8rem;
+    --font-size-regular: 1.4rem;
+    --font-size-small: 1.2rem;
+    --font-size-xs: 1rem;
+  }
+
   @media (max-width: 768px) {
     :root {
       --font-size-regular: 1.4rem; 
     }
+  }
+
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    --font-size-heading-01: 3rem;
+    --font-size-heading-02: 2.4rem;
+    --font-size-heading-03: 2rem;
+    --font-size-heading-04: 1.6rem;
+    --font-size-heading-05: 1.4rem;
+
+    --font-size-extra-large: 1.8rem;
+    --font-size-large: 1.6rem;
+    --font-size-regular: 1.2rem;
+    --font-size-small: 1.2rem;
+    --font-size-xs: 1rem;
   }
 
   // Color Styles

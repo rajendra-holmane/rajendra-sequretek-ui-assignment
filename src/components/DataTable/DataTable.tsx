@@ -126,7 +126,7 @@ const DataTableComponent: React.FC<DataTableComponentProps> = ({
   ];
 
   return (
-    <div>
+    <div className='data-table-container'>
       <DataTable
         columns={columns}
         data={data}

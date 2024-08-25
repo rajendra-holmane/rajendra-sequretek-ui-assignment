@@ -39,7 +39,7 @@ const Dashboard: React.FC = () => {
           totalPages={totalPages}
         />
       </div>
-      <Row className='custom-row'>
+      <Row className='g-0 custom-row'>
       <Col lg={6} className="custom-col">
         <div className='title-section'>
         <h2>Color Bar Chart</h2>
@@ -61,7 +61,7 @@ const Dashboard: React.FC = () => {
         </Card>
       </Col>        
     </Row>
-      <Row className='custom-row table-section'>
+      <Row className='g-0 custom-row table-section'>
       <Col lg={12} className="custom-col">
         <div className='title-section'>
           <h2>Users List</h2>

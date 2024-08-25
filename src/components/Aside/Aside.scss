@@ -51,10 +51,53 @@ aside{
       }
       span{
         padding-top: 12px;
+        text-align: center;
       }
     }
   }
 }
 body.aside{
   padding-left: 140px;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
+  body.aside{
+    padding-left: 100px;
+  }
+  aside{
+    width: 100px;
+    .logo{
+      height: 70px;
+    }
+  }    
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  aside{
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    top: auto;
+    .logo{
+      display: none;
+    }
+    ul{
+      display: flex;
+      li{
+        width: calc(100% / 5);
+        a{
+          &.active{
+            &::before{
+              top: -2px;
+              right: calc(50% - 7px);
+              transform: rotate(180deg);
+            }
+          }
+        }
+        span{
+          display: none;
+        }
+      }
+    }
+  }
 }
