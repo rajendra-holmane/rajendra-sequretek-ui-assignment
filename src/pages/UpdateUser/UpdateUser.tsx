@@ -101,13 +101,13 @@ const UpdateUser: React.FC = () => {
           <h2>Update User</h2>
         </div>
         <Row className="g-0 form-container">
-          <Col md={6} sm={12}>
+          <Col xl={6} lg={9} md={12}>
             <Form onSubmit={handleSubmit} className="form">
               {successMessage && <Alert variant="success">{successMessage}</Alert>}
               {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
               <Row>
                 <Col md={4} sm={12}>
-                  <Form.Group className="form-group" controlId="avatar">
+                  <Form.Group className="form-group profile-pic" controlId="avatar">
                     <Form.Label>Your Profile Picture</Form.Label>
                     <FileUpload
                       avatar={avatar}

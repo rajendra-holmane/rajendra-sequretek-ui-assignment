@@ -137,6 +137,7 @@ h2{
 
 .arrow-title{
   display: flex;
+  align-items: center;
 }
 
 .back-button{
@@ -271,4 +272,15 @@ h2{
   }
 }
 /*React Datatable Style:end*/
+
+.profile-pic{
+  .file-upload{
+    margin: 0 auto;
+  }
+}
+.back-button {
+  cursor: pointer;
+  width: 30px;
+  margin-left: -4px;
+}
 }
