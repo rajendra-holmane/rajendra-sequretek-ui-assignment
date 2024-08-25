@@ -10,7 +10,7 @@
     z-index: 99;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
   
     .rhs{
       display: flex;
@@ -21,10 +21,11 @@
     }
     .welcome-msg{
       p{
-        font-size: var(--font-size-small);
+        font-size: var(--font-size-xs);
       }
       .user-name{
         font-size: var(--font-size-small);
+        font-weight: 500;
       }
     }
     .avtar{

@@ -7,6 +7,30 @@ const menuItems = [
     icon: "/Assets/images/overview-icon.svg",
     link: "",
     active: true
+  },
+  {
+    label: "Dashboard 2",
+    icon: "/Assets/images/overview-icon.svg",
+    link: "",
+    active: false
+  },
+  {
+    label: "Dashboard 2",
+    icon: "/Assets/images/overview-icon.svg",
+    link: "",
+    active: false
+  },
+  {
+    label: "Dashboard 2",
+    icon: "/Assets/images/overview-icon.svg",
+    link: "",
+    active: false
+  },
+  {
+    label: "Dashboard 2",
+    icon: "/Assets/images/overview-icon.svg",
+    link: "",
+    active: false
   }
 ];
 

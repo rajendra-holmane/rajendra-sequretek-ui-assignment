@@ -2,9 +2,9 @@
   // Typography
   --font-family-open-sans: "Open Sans", sans-serif;
   --font-size-display: 6.4rem;
-  --font-size-heading-01: 4.8rem;
-  --font-size-heading-02: 4rem;
-  --font-size-heading-03: 3.2rem;
+  --font-size-heading-01: 4rem;
+  --font-size-heading-02: 3.6rem;
+  --font-size-heading-03: 3rem;
   --font-size-heading-04: 2.4rem;
   --font-size-heading-05: 1.6rem;
 
@@ -12,6 +12,7 @@
   --font-size-large: 2rem;
   --font-size-regular: 1.6rem;
   --font-size-small: 1.4rem;
+  --font-size-xs: 1.4rem;
 
   @media (max-width: 768px) {
     :root {

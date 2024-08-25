@@ -3,7 +3,8 @@ import './Header.scss';
 const Header: React.FC = () => {
   return (
     <>
-      <header>        
+      <header>
+        <h1>UI Assignment | Rajendra Holmane</h1>        
         <div className="welcome">
             <img className="avtar" src="/Assets/images/linkdin-profile-pic.png" alt="" />
             <div className="welcome-msg">
