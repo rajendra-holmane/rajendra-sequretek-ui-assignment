@@ -47,8 +47,9 @@ const DataTableComponent: React.FC<DataTableComponentProps> = ({
       setLoading(true);
       try {
         const response = await fetchUsers(currentPage);
-        // console.log(response);
+        console.log(response);
         setData(response.data.data);
+        
         onPerPageChange(response.data.per_page);
         setTotalUsers(response.data.total);
         setTotalPages(response.data.total_pages);

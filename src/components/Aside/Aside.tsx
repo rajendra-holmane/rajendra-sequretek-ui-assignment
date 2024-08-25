@@ -9,25 +9,25 @@ const menuItems = [
     active: true
   },
   {
-    label: "Dashboard 2",
+    label: "Analytics",
     icon: "/Assets/images/overview-icon.svg",
     link: "",
     active: false
   },
   {
-    label: "Dashboard 2",
+    label: "Reports",
     icon: "/Assets/images/overview-icon.svg",
     link: "",
     active: false
   },
   {
-    label: "Dashboard 2",
+    label: "Projects",
     icon: "/Assets/images/overview-icon.svg",
     link: "",
     active: false
   },
   {
-    label: "Dashboard 2",
+    label: "Tasks",
     icon: "/Assets/images/overview-icon.svg",
     link: "",
     active: false

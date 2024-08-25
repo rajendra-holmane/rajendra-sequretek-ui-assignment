@@ -2,8 +2,12 @@ import axios from 'axios';
 
 const API_URL = 'https://reqres.in/api';
 
+// export const fetchUsers = (page: number) =>
+//     axios.get(`${API_URL}/users`);
+// export const fetchUsers = (page: number) =>
+//     axios.get(`${API_URL}/users?page=${page}`);
 export const fetchUsers = (page: number) =>
-    axios.get(`${API_URL}/users`);
+    axios.get(`${API_URL}/users`, { params: { page } });
 
 export const fetchUserById = (id: number) =>
     axios.get(`${API_URL}/users/${id}`);
